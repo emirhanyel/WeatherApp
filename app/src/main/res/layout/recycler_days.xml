@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/Days10TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        android:text="10 Days Forecast"
+        android:textColor="@color/white"
+        android:textSize="25sp">
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ForecastDaysRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+
+        android:layout_marginTop="20dp"
+        tools:listitem="@layout/recycler_days_items">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

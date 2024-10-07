@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/light_blue"/>
+        </shape>
+    </item>
+
+    <!-- Top and bottom border -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/light_blue"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/white"/> <!-- Black border color -->
+        </shape>
+    </item>
+
+    <!-- Left border -->
+    <item android:bottom="2dp" android:top="2dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/light_blue"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/light_blue"/> <!-- Blue border color -->
+        </shape>
+    </item>
+
+    <!-- Right border -->
+    <item android:bottom="2dp" android:top="2dp" android:left="0dp">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/light_blue"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/light_blue"/> <!-- Blue border color -->
+        </shape>
+    </item>
+</layer-list>
+

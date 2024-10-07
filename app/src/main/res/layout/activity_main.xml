@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="500"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewWeather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="56dp"
+        android:text="Weather"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/SearchCityLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/background_search_city_edit_text"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        app:layout_constraintStart_toStartOf="@+id/textViewWeather"
+        app:layout_constraintTop_toBottomOf="@+id/textViewWeather">
+
+        <EditText
+            android:id="@+id/SearchCityEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:drawableStart="?android:attr/actionModeWebSearchDrawable"
+
+            android:drawablePadding="6dp"
+
+            android:drawableTint="@color/material_dynamic_neutral70"
+            android:ems="8"
+            android:hint="Search for a city"
+            android:imeOptions="flagNoExtractUi"
+            android:importantForAccessibility="no"
+            android:inputType="textNoSuggestions|textVisiblePassword"
+            android:textColor="@color/white"
+            android:textColorHint="@color/material_dynamic_neutral70" />
+
+        <ImageView
+            android:id="@+id/speakImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="130dp"
+            android:background="@color/material_dynamic_neutral20"
+            android:src="@android:drawable/ic_btn_speak_now">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/MyWeatherLocationsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toStartOf="@+id/SearchCityLayout"
+        app:layout_constraintTop_toBottomOf="@+id/SearchButton">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/SearchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:text="Search"
+        app:layout_constraintEnd_toEndOf="@+id/SearchCityLayout"
+        app:layout_constraintTop_toBottomOf="@+id/SearchCityLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
